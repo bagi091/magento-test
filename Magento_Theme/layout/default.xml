@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Vaimo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Template" name="footer_links.custom_link" template="Magento_Theme::footer/popup_link.phtml" before="-">
+                <arguments>
+                    <argument name="title" translate="true" xsi:type="string">Open popup</argument>
+                </arguments>
+                <block class="Magento\Cms\Block\Block" name="viamo-footer-popup">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">viamo-footer-popup</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
