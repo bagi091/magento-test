@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © Vaimo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<li class="nav item" data-bind="scope: 'footer-modal'">
+    <a href="#!" data-bind="click: openModal">
+        <?= /* @escapeNotVerified */ $block->getTitle() ?>
+    </a>
+
+    <div class="no-display" data-bind="afterRender: initModal" css="modalClass" hasFocus="focused">
+        <?= $block->getChildHtml(); ?>
+    </div>
+</li>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "footer-modal": {
+                    "component": "Magento_Ui/js/modal/modal-component",
+                    "options": {
+                        "title": "<?= $block->escapeJs(__('Footer popup')) ?>",
+                        "buttons": [
+                            {
+                                "text": "<?= $block->escapeJs(__('Close')) ?>",
+                                "actions": ["closeModal"]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
