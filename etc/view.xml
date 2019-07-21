@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Vaimo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/view.xsd">
+    <vars module="Magento_Catalog">
+        <var name="gallery">
+            <var name="nav">dots</var> <!-- Gallery navigation style (false/thumbs/dots) -->
+            <var name="arrows">false</var> <!-- Turn on/off arrows on the sides preview (true/false) -->
+            <var name="transition">
+                <var name="duration">1000</var> <!-- Sets transition duration in ms -->
+            </var>
+        </var>
+    </vars>
+</view>
