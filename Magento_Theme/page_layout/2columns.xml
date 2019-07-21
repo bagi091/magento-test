@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Viamo. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <update handle="1column"/>
+    <referenceContainer name="columns">
+        <container name="div.column.first" htmlTag="div" htmlClass="custom-column" after="main">
+            <block class="Magento\Framework\View\Element\Template" name="custom.tab.first" template="Magento_Theme::html/collapsible.phtml">
+                <arguments>
+                    <argument name="block_title" translate="true" xsi:type="string">First tab</argument>
+                    <argument name="block_css" xsi:type="string">block-collapsible-products-left</argument>
+                </arguments>
+                <block class="Magento\Catalog\Block\Product\ProductList\Random" name="custom.tab.first.product" template="Magento_Catalog::product/list.phtml">
+                    <action method="setNumProducts">
+                        <argument name="num-products" xsi:type="number">5</argument>
+                    </action>
+                </block>
+            </block>
+        </container>
+        <container name="div.column.second" htmlTag="div" htmlClass="custom-column" after="div.column.left">
+            <block class="Magento\Framework\View\Element\Template" name="custom.tab.second" template="Magento_Theme::html/collapsible.phtml">
+                <arguments>
+                    <argument name="block_title" translate="true" xsi:type="string">Second tab</argument>
+                    <argument name="block_css" xsi:type="string">block-collapsible-products-right</argument>
+                </arguments>
+                <block class="Magento\Catalog\Block\Product\ProductList\Random" name="custom.tab.second.product" template="Magento_Catalog::product/list.phtml">
+                    <action method="setNumProducts">
+                        <argument name="num-products" xsi:type="number">5</argument>
+                    </action>
+                </block>
+            </block>
+        </container>
+    </referenceContainer>
+</layout>
