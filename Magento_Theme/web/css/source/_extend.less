@@ -1,0 +1,50 @@
+// /**
+//  * Copyright © Vaimo. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+& when (@media-common = true) {
+    .custom-column {
+        .lib-column(1, 1);
+
+        .products-grid .product-item {
+            width: 50%;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .block-collapsible-products {
+        &-left,
+        &-right {
+            &-content {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .custom-column {
+        .lib-column(1, 2);
+
+        .products-grid .product-item {
+            width: 33.33333%;
+        }
+    }
+
+    .block-collapsible-products {
+        &-left,
+        &-right {
+            &-content {
+                display: block;
+            }
+        }
+    }
+}
+
+
