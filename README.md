@@ -8,3 +8,4 @@
 6. I think I didn't understand this task. Speaking of accordion (tabs) Magento provides a lot of technical capabilities. It's the same for media-check too.
 7. I could also do it using jQuery widget Modal but I prefer to use knockout style.
 8. 
+9. If it need only when changing shipping address form I can do it as validation rule.
